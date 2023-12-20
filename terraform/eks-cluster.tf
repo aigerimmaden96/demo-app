@@ -14,6 +14,10 @@ module "eks" {
         application = "demo-app"
     }
 
+    node_security_group_tags = {
+        "kubernetes.io/cluster/demo-eks-cluster" = null
+    }
+
     eks_managed_node_groups = {
         dev = {
             min_size = 1
