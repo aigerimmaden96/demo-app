@@ -17,8 +17,8 @@ spec:
         image: nginx:1.24.0
         ports:
         - containerPort: 80
-      tolerations:
-      - effect: NoSchedule
-        key: managed
-        operator: Equal
-        value: demo-app
+      # tolerations:
+      # - effect: NoSchedule
+      #   key: managed
+      #   operator: Equal
+      #   value: demo-app
