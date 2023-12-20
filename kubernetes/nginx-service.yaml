@@ -4,12 +4,14 @@ metadata:
   name: nginx
   labels:
     app: nginx
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-internal: "true"
 spec:
   ports:
   - name: http
-    port: 80
+    port: 8080
     protocol: TCP
-    targetPort: 80
+    targetPort: 8080
   selector:
     app: nginx
   type: LoadBalancer
